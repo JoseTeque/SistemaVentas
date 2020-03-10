@@ -442,5 +442,47 @@ namespace Capa_datos
             return DtResultado;
 
         }
+
+        public DataTable Login(DTrabajador trabajador)
+        {
+
+            DataTable DtResultado = new DataTable("Trabajador");
+            SqlConnection sqlConnection = new SqlConnection();
+
+            try
+            {
+                sqlConnection.ConnectionString = Conexion.Cn;
+                //Establecer el comando
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "splogin";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter sqlParUsuario = new SqlParameter();
+                sqlParUsuario.ParameterName = "@usuario";
+                sqlParUsuario.SqlDbType = SqlDbType.VarChar;
+                sqlParUsuario.Value = trabajador.Usuario;
+                sqlParUsuario.Size = 20;
+                sqlCommand.Parameters.Add(sqlParUsuario);
+
+                SqlParameter sqlParPassword = new SqlParameter();
+                sqlParPassword.ParameterName = "@password";
+                sqlParPassword.SqlDbType = SqlDbType.VarChar;
+                sqlParPassword.Value = trabajador.Password;
+                sqlParPassword.Size = 20;
+                sqlCommand.Parameters.Add(sqlParPassword);
+
+                SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand);
+                sqlData.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+
+            return DtResultado;
+
+        }
     }
 }

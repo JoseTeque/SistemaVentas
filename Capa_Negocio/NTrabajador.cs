@@ -96,5 +96,16 @@ namespace Capa_Negocio
             return trabajador.BuscarNumDocumento(trabajador);
 
         }
+
+        public static DataTable Login(string Usuario, string Password)
+        {
+            DTrabajador trabajador = new DTrabajador();
+
+            trabajador.Usuario = Usuario;
+            trabajador.Password = Password;
+
+            return trabajador.Login(trabajador);
+
+        }
     }
 }

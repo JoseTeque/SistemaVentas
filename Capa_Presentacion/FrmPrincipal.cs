@@ -14,6 +14,12 @@ namespace Capa_Presentacion
     {
         private int childFormNumber = 0;
 
+        public string IdTrabajador = "";
+        public string apellidos = "";
+        public string nombre = "";
+        public string acceso = "";
+
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -107,6 +113,97 @@ namespace Capa_Presentacion
         private void mantimientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategoria frmCategoria = new FrmCategoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.Show();
+        }
+
+        private void presentacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPresentacion frm = new FrmPresentacion();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmArticulos frm = FrmArticulos.GetInstance();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProveedor frm = new FrmProveedor();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente frm = new FrmCliente();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void trabajadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTrabajador frm = new FrmTrabajador();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void GestionAcceso()
+        {
+            //Controla los accesos de los trabajadores
+            if(acceso == "Administrador")
+            {
+                this.MnuAlmacen.Enabled = true;
+                this.MnuCompras.Enabled = true;
+                this.MnuConsultas.Enabled = true;
+                this.MnuVentas.Enabled = true;
+                this.MnuMantenimiento.Enabled = true;
+                this.MnuHerramientas.Enabled = true;
+                this.TsCompras.Enabled = true;
+                this.TsVentas.Enabled = true;
+            }
+            else if(acceso == "Vendedor")
+            {
+                this.MnuAlmacen.Enabled = false;
+                this.MnuCompras.Enabled = false;
+                this.MnuConsultas.Enabled = false;
+                this.MnuVentas.Enabled = true;
+                this.MnuMantenimiento.Enabled = false;
+                this.MnuHerramientas.Enabled = false;
+                this.TsCompras.Enabled = false;
+                this.TsVentas.Enabled = true;
+            }
+            else 
+            {
+                this.MnuAlmacen.Enabled = false;
+                this.MnuCompras.Enabled = false;
+                this.MnuConsultas.Enabled = false;
+                this.MnuVentas.Enabled = false;
+                this.MnuMantenimiento.Enabled = false;
+                this.MnuHerramientas.Enabled = false;
+                this.TsCompras.Enabled = false;
+                this.TsVentas.Enabled = false;
+            }
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            GestionAcceso();
         }
     }
 }
