@@ -69,6 +69,12 @@
     <Compile Include="FrmCliente.designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngreso.Designer.cs">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,18 @@
     <Compile Include="FrmTrabajador.designer.cs">
       <DependentUpon>FrmTrabajador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVistaArticulo_ingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVistaArticulo_ingreso.Designer.cs">
+      <DependentUpon>FrmVistaArticulo_ingreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVistaProveedor_ingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVistaProveedor_ingreso.Designer.cs">
+      <DependentUpon>FrmVistaProveedor_ingreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,6 +143,9 @@
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngreso.resx">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTrabajador.resx">
       <DependentUpon>FrmTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVistaArticulo_ingreso.resx">
+      <DependentUpon>FrmVistaArticulo_ingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVistaProveedor_ingreso.resx">
+      <DependentUpon>FrmVistaProveedor_ingreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,6 +204,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Banned User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-scale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar_p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -205,5 +205,15 @@ namespace Capa_Presentacion
         {
             GestionAcceso();
         }
+
+        private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIngreso frm = FrmIngreso.GetInstance();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.IdTrabajador = Convert.ToInt32(this.IdTrabajador);
+        }
+        
+        
     }
 }
