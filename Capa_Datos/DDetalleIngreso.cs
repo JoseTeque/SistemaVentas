@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Capa_datos;
+
 
 namespace Capa_Datos
 {
@@ -77,12 +77,12 @@ namespace Capa_Datos
                 SqlParameter sqlParameterIdIngreso = new SqlParameter();
                 sqlParameterIdIngreso.ParameterName = "@IdIngreso";
                 sqlParameterIdIngreso.SqlDbType = SqlDbType.Int;
-                sqlParameterIdIngreso.Value = detalleIngreso.IdArticulo;
+                sqlParameterIdIngreso.Value = detalleIngreso.IdIngreso;
                 sqlCommand.Parameters.Add(sqlParameterIdIngreso);
 
 
                 SqlParameter sqlParPreCompra = new SqlParameter();
-                sqlParPreCompra.ParameterName = "@precio_compa";
+                sqlParPreCompra.ParameterName = "@precio_compra";
                 sqlParPreCompra.SqlDbType = SqlDbType.Money;
                 sqlParPreCompra.Value = detalleIngreso.Precio_compra;
                 sqlCommand.Parameters.Add(sqlParPreCompra);

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\SistemaVentaWF.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\App.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="SistemaVentaWF" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF\SistemaVentaWF.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Datos\Capa_Datos.csproj" />
+  <event action="Analyze" type="Success" name="Capa_Datos" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Datos\Capa_Datos.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Negocio\Capa_Negocio.csproj" />
+  <event action="Analyze" type="Success" name="Capa_Negocio" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Negocio\Capa_Negocio.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\Capa_Presentacion.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\app.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\app.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\app.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\app.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\app.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\app.config" />
+  <event action="Analyze" type="Success" name="app.config" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\app.config" />
+  <event action="Analyze" type="Success" name="FrmArticulos.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmArticulos.resx" />
+  <event action="Analyze" type="Success" name="FrmCategoria.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmCategoria.resx" />
+  <event action="Analyze" type="Success" name="FrmCategorias_Articulos.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmCategorias_Articulos.resx" />
+  <event action="Analyze" type="Success" name="FrmCliente.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmCliente.resx" />
+  <event action="Analyze" type="Success" name="FrmIngreso.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmIngreso.resx" />
+  <event action="Analyze" type="Success" name="FrmLogin.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmLogin.resx" />
+  <event action="Analyze" type="Success" name="FrmPresentacion.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmPresentacion.resx" />
+  <event action="Analyze" type="Success" name="FrmPrincipal.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmPrincipal.resx" />
+  <event action="Analyze" type="Success" name="FrmProveedor.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmProveedor.resx" />
+  <event action="Analyze" type="Success" name="FrmTrabajador.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmTrabajador.resx" />
+  <event action="Analyze" type="Success" name="FrmVenta.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmVenta.resx" />
+  <event action="Analyze" type="Success" name="FrmVistaArticulo_ingreso.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmVistaArticulo_ingreso.resx" />
+  <event action="Analyze" type="Success" name="FrmVistaArticulo_Venta.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmVistaArticulo_Venta.resx" />
+  <event action="Analyze" type="Success" name="FrmVistaCliente_Venta.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmVistaCliente_Venta.resx" />
+  <event action="Analyze" type="Success" name="FrmVistaProveedor_ingreso.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\FrmVistaProveedor_ingreso.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="Capa_Presentacion" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\Capa_Presentacion\Capa_Presentacion.csproj" />
+  <event action="Analyze" type="Success" name="SistemaVentaWF" path="C:\Users\Acer\Desktop\Proyectos\SistemaVentaWF\SistemaVentaWF.sln" />
+</log>

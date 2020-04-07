@@ -29,10 +29,10 @@ namespace Capa_Negocio
                 {
                     DDetalleIngreso dDetalle = new DDetalleIngreso();
                     dDetalle.IdArticulo = Convert.ToInt32(data["IdArticulo"].ToString());
-                    dDetalle.Precio_compra = Convert.ToInt32(data["precio_compra"].ToString());
-                    dDetalle.Precio_venta = Convert.ToInt32(data["precio_venta"].ToString());
+                    dDetalle.Precio_compra = Convert.ToDecimal(data["precio_compra"].ToString());
+                    dDetalle.Precio_venta = Convert.ToDecimal(data["precio_venta"].ToString());
                     dDetalle.Stock_inicial = Convert.ToInt32(data["stock_inicial"].ToString());
-                    dDetalle.Stock_actual = Convert.ToInt32(data["stock_actual"].ToString());
+                    dDetalle.Stock_actual = Convert.ToInt32(data["stock_inicial"].ToString());
                     dDetalle.Fecha_produccion = Convert.ToDateTime(data["fecha_produccion"].ToString());
                     dDetalle.Fecha_vencimiento = Convert.ToDateTime(data["fecha_vencimiento"].ToString());
                      detalleIngresos.Add(dDetalle);
@@ -65,7 +65,7 @@ namespace Capa_Negocio
         //Metodo BUSCAR que llama al metodo insertar de la clase DIngreso
         //de la capa datos
 
-        public static DataTable BuscarFecha(string textoBuscar,string textoBuscarFecha)
+        public static DataTable BuscarFecha(DateTime textoBuscar,DateTime textoBuscarFecha)
             {
 
             return new DIngreso().BuscarFecha(textoBuscar,textoBuscarFecha);

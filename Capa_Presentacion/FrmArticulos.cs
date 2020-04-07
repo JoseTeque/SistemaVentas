@@ -20,13 +20,16 @@ namespace Capa_Presentacion
 
         public static FrmArticulos GetInstance()
         {
-            if(_instance == null)
+            if(_instance == null || _instance.IsDisposed)
             {
                 _instance = new FrmArticulos();
             }
+          
             return _instance;
 
         }
+
+
 
         public void setCategoria(string idCategoria, string nombre)
         {
@@ -34,6 +37,10 @@ namespace Capa_Presentacion
             this.txtCategorias.Text = nombre; 
 
         }
+
+
+
+
         public FrmArticulos()
         {
             InitializeComponent();

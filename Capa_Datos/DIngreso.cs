@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Data;
 using System.Data.SqlClient;
-using Capa_datos;
+
 
 namespace Capa_Datos
 {
@@ -137,7 +137,7 @@ namespace Capa_Datos
                 if (rpta.Equals("OK"))
                 {
                     //Obtener el codigo del ingreso generado
-                    this.IdIngreso = Convert.ToInt32(sqlCommand.Parameters["IdIngreso"].Value);
+                    this.IdIngreso = Convert.ToInt32(sqlCommand.Parameters["@IdIngreso"].Value);
                     foreach(DDetalleIngreso det in detalleIngreso)
                     {
                         det.IdIngreso = this.IdIngreso;
@@ -242,7 +242,7 @@ namespace Capa_Datos
         }
 
         //Metodo buscar fecha
-        public DataTable BuscarFecha(string textoBuscar, string textoBuscar2)
+        public DataTable BuscarFecha(DateTime textoBuscar, DateTime textoBuscar2)
         {
 
             DataTable DtResultado = new DataTable("Ingreso");
@@ -259,16 +259,16 @@ namespace Capa_Datos
 
                 SqlParameter sqlParfechaIncial = new SqlParameter();
                 sqlParfechaIncial.ParameterName = "@textobuscar";
-                sqlParfechaIncial.SqlDbType = SqlDbType.VarChar;
+                sqlParfechaIncial.SqlDbType = SqlDbType.Date;
                 sqlParfechaIncial.Value = textoBuscar;
-                sqlParfechaIncial.Size =20;
+                //sqlParfechaIncial.Size =20;
                 sqlCommand.Parameters.Add(sqlParfechaIncial);
 
                 SqlParameter sqlParfechaFinal = new SqlParameter();
                 sqlParfechaFinal.ParameterName = "@textobuscar1";
-                sqlParfechaFinal.SqlDbType = SqlDbType.VarChar;
+                sqlParfechaFinal.SqlDbType = SqlDbType.Date;
                 sqlParfechaFinal.Value = textoBuscar2;
-                sqlParfechaFinal.Size =20;
+               // sqlParfechaFinal.Size =20;
                 sqlCommand.Parameters.Add(sqlParfechaFinal);
 
                 SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand);

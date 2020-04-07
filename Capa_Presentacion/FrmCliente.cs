@@ -280,17 +280,7 @@ namespace Capa_Presentacion
             this.tabControl1.SelectedIndex = 1;
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (this.cboxBuscar.Text.Equals("Apellidos"))
-            {
-                this.BuscarApellido();
-            }
-            else if (this.cboxBuscar.Text.Equals("Nro Documento"))
-            {
-                this.BuscarNroDocumento();
-            }
-        }
+     
 
         private void chexbEliminar_CheckedChanged(object sender, EventArgs e)
         {
@@ -304,7 +294,40 @@ namespace Capa_Presentacion
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell dataGridView = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
+                dataGridView.Value = !Convert.ToBoolean(dataGridView.Value);
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (this.cboxBuscar.Text.Equals("Apellidos"))
+            {
+                this.BuscarApellido();
+            }
+            else if (this.cboxBuscar.Text.Equals("Nro Documento"))
+            {
+                this.BuscarNroDocumento();
+            }
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (this.cboxBuscar.Text.Equals("Apellidos"))
+            {
+                this.BuscarApellido();
+            }
+            else if (this.cboxBuscar.Text.Equals("Nro Documento"))
+            {
+                this.BuscarNroDocumento();
+            }
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -348,25 +371,9 @@ namespace Capa_Presentacion
             }
         }
 
-        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnImprimir_Click(object sender, EventArgs e)
         {
-            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell dataGridView = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
-                dataGridView.Value = !Convert.ToBoolean(dataGridView.Value);
-            }
-        }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            if (this.cboxBuscar.Text.Equals("Apellidos"))
-            {
-                this.BuscarApellido();
-            }
-            else if (this.cboxBuscar.Text.Equals("Nro Documento"))
-            {
-                this.BuscarNroDocumento();
-            }
         }
     }
 }

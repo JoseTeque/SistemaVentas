@@ -45,16 +45,21 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cboxSexo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,17 +68,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cboxSexo = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cboxBuscar
@@ -82,7 +84,7 @@
             this.cboxBuscar.Items.AddRange(new object[] {
             "Apellidos",
             "Nro Documento"});
-            this.cboxBuscar.Location = new System.Drawing.Point(25, 33);
+            this.cboxBuscar.Location = new System.Drawing.Point(22, 49);
             this.cboxBuscar.Name = "cboxBuscar";
             this.cboxBuscar.Size = new System.Drawing.Size(121, 26);
             this.cboxBuscar.TabIndex = 8;
@@ -93,15 +95,19 @@
             this.dataListado.AllowUserToAddRows = false;
             this.dataListado.AllowUserToDeleteRows = false;
             this.dataListado.AllowUserToOrderColumns = true;
+            this.dataListado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataListado.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ELIMINAR});
-            this.dataListado.Location = new System.Drawing.Point(6, 135);
+            this.dataListado.Location = new System.Drawing.Point(6, 125);
             this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
             this.dataListado.ReadOnly = true;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(848, 325);
+            this.dataListado.Size = new System.Drawing.Size(888, 320);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -114,9 +120,9 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(161, 33);
+            this.txtBuscar.Location = new System.Drawing.Point(158, 49);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(211, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(308, 26);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -182,7 +188,7 @@
             // Listado
             // 
             this.Listado.AutoSize = true;
-            this.Listado.Location = new System.Drawing.Point(618, 106);
+            this.Listado.Location = new System.Drawing.Point(648, 91);
             this.Listado.Name = "Listado";
             this.Listado.Size = new System.Drawing.Size(50, 18);
             this.Listado.TabIndex = 6;
@@ -239,91 +245,74 @@
             this.txtDireccion.Size = new System.Drawing.Size(407, 60);
             this.txtDireccion.TabIndex = 5;
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(440, 405);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 23);
-            this.btnEditar.TabIndex = 8;
-            this.btnEditar.Text = "E&ditar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnImprimir);
+            this.tabPage1.Controls.Add(this.btnEliminar);
+            this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.cboxBuscar);
             this.tabPage1.Controls.Add(this.dataListado);
             this.tabPage1.Controls.Add(this.Listado);
             this.tabPage1.Controls.Add(this.chexbEliminar);
-            this.tabPage1.Controls.Add(this.btnImprimir);
-            this.tabPage1.Controls.Add(this.btnEliminar);
-            this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.txtBuscar);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(897, 466);
+            this.tabPage1.Size = new System.Drawing.Size(906, 451);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnImprimir
             // 
+            this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Location = new System.Drawing.Point(721, 31);
+            this.btnImprimir.Image = global::Capa_Presentacion.Properties.Resources.imprimir;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(785, 49);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(133, 29);
-            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Size = new System.Drawing.Size(103, 28);
+            this.btnImprimir.TabIndex = 11;
             this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.AutoSize = true;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(570, 31);
+            this.btnEliminar.Image = global::Capa_Presentacion.Properties.Resources.eliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(651, 49);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(133, 29);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Size = new System.Drawing.Size(103, 28);
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.AutoSize = true;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(394, 31);
+            this.btnBuscar.Image = global::Capa_Presentacion.Properties.Resources.Buscar_p;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(512, 49);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(133, 29);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Size = new System.Drawing.Size(103, 28);
+            this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(576, 405);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 23);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // ttMensaje
             // 
             this.ttMensaje.IsBalloon = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(295, 405);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tabPage2
             // 
@@ -331,7 +320,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(897, 466);
+            this.tabPage2.Size = new System.Drawing.Size(906, 451);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -368,6 +357,92 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
             // 
+            // dtFechaNac
+            // 
+            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaNac.Location = new System.Drawing.Point(494, 173);
+            this.dtFechaNac.Name = "dtFechaNac";
+            this.dtFechaNac.Size = new System.Drawing.Size(200, 26);
+            this.dtFechaNac.TabIndex = 26;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(348, 176);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 18);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Fecha Nacimiento:";
+            // 
+            // cboxSexo
+            // 
+            this.cboxSexo.FormattingEnabled = true;
+            this.cboxSexo.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cboxSexo.Location = new System.Drawing.Point(147, 173);
+            this.cboxSexo.Name = "cboxSexo";
+            this.cboxSexo.Size = new System.Drawing.Size(151, 26);
+            this.cboxSexo.TabIndex = 24;
+            this.cboxSexo.Text = "M";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(86, 176);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 18);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Sexo:";
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidos.Location = new System.Drawing.Point(520, 76);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(329, 26);
+            this.txtApellidos.TabIndex = 22;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::Capa_Presentacion.Properties.Resources.Remove;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(576, 405);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(103, 26);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = global::Capa_Presentacion.Properties.Resources.restaurar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(440, 405);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(103, 26);
+            this.btnEditar.TabIndex = 8;
+            this.btnEditar.Text = "E&ditar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::Capa_Presentacion.Properties.Resources.disco1;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(295, 405);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(103, 26);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // txtIdCliente
             // 
             this.txtIdCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -379,11 +454,14 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(138, 405);
+            this.btnNuevo.Image = global::Capa_Presentacion.Properties.Resources.nuevo;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(147, 405);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(103, 26);
             this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -419,7 +497,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(45, 10);
+            this.label6.Location = new System.Drawing.Point(36, 18);
             this.label6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 29);
@@ -432,68 +510,36 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(40, 44);
+            this.tabControl1.Location = new System.Drawing.Point(12, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(905, 497);
+            this.tabControl1.Size = new System.Drawing.Size(914, 482);
             this.tabControl1.TabIndex = 10;
             // 
-            // txtApellidos
+            // pictureBox1
             // 
-            this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApellidos.Location = new System.Drawing.Point(520, 76);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(329, 26);
-            this.txtApellidos.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 176);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Sexo:";
-            // 
-            // cboxSexo
-            // 
-            this.cboxSexo.FormattingEnabled = true;
-            this.cboxSexo.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cboxSexo.Location = new System.Drawing.Point(147, 173);
-            this.cboxSexo.Name = "cboxSexo";
-            this.cboxSexo.Size = new System.Drawing.Size(151, 26);
-            this.cboxSexo.TabIndex = 24;
-            this.cboxSexo.Text = "M";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(348, 176);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 18);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Fecha Nacimiento:";
-            // 
-            // dtFechaNac
-            // 
-            this.dtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNac.Location = new System.Drawing.Point(494, 173);
-            this.dtFechaNac.Name = "dtFechaNac";
-            this.dtFechaNac.Size = new System.Drawing.Size(200, 26);
-            this.dtFechaNac.TabIndex = 26;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::Capa_Presentacion.Properties.Resources.Users_2;
+            this.pictureBox1.Location = new System.Drawing.Point(160, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 550);
+            this.ClientSize = new System.Drawing.Size(938, 559);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmCliente";
@@ -507,6 +553,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,18 +577,11 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ToolTip ttMensaje;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtIdCliente;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -553,5 +593,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtFechaNac;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

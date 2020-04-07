@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Capa_datos;
+using Capa_Datos;
 using System.Data;
 
 namespace Capa_Negocio
@@ -74,6 +74,11 @@ namespace Capa_Negocio
 
             return articulos.BuscarNombre(articulos);
 
+        }
+
+        public static DataTable MostrarStockArticulos()
+        {
+            return new DArticulos().MostrarStockArticulos();
         }
     }
 }

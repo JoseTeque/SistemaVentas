@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Presentacion.Consultas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -213,7 +214,19 @@ namespace Capa_Presentacion
             frm.Show();
             frm.IdTrabajador = Convert.ToInt32(this.IdTrabajador);
         }
-        
-        
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmVenta frm = FrmVenta.GetInstance();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.IdTrabajador = Convert.ToInt32(this.IdTrabajador);
+        }
+
+        private void stockArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultas_stock_Articulos frm = new FrmConsultas_stock_Articulos();
+            frm.ShowDialog();
+        }
     }
 }

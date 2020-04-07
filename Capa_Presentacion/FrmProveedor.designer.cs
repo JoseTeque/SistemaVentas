@@ -231,11 +231,14 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(576, 405);
+            this.btnCancelar.Image = global::Capa_Presentacion.Properties.Resources.Remove;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(649, 405);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(103, 26);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -252,21 +255,27 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(440, 405);
+            this.btnEditar.Image = global::Capa_Presentacion.Properties.Resources.restaurar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(504, 405);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 23);
+            this.btnEditar.Size = new System.Drawing.Size(103, 26);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "E&ditar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(295, 405);
+            this.btnGuardar.Image = global::Capa_Presentacion.Properties.Resources.disco;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(355, 405);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(103, 26);
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -281,11 +290,14 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(138, 405);
+            this.btnNuevo.Image = global::Capa_Presentacion.Properties.Resources.nuevo;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(202, 405);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(103, 26);
             this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -322,7 +334,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(897, 466);
+            this.tabPage2.Size = new System.Drawing.Size(906, 451);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -331,19 +343,22 @@
             // 
             this.btnBuscar.AutoSize = true;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(394, 31);
+            this.btnBuscar.Image = global::Capa_Presentacion.Properties.Resources.Buscar_p;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(512, 49);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(133, 29);
+            this.btnBuscar.Size = new System.Drawing.Size(103, 28);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(161, 33);
+            this.txtBuscar.Location = new System.Drawing.Point(164, 49);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(211, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(298, 26);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -352,10 +367,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(25, 43);
+            this.tabControl1.Location = new System.Drawing.Point(12, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(905, 497);
+            this.tabControl1.Size = new System.Drawing.Size(914, 482);
             this.tabControl1.TabIndex = 8;
             // 
             // tabPage1
@@ -371,7 +386,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(897, 466);
+            this.tabPage1.Size = new System.Drawing.Size(906, 451);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -382,7 +397,7 @@
             this.cboxBuscar.Items.AddRange(new object[] {
             "Razon Social",
             "Nro Documento"});
-            this.cboxBuscar.Location = new System.Drawing.Point(25, 33);
+            this.cboxBuscar.Location = new System.Drawing.Point(22, 49);
             this.cboxBuscar.Name = "cboxBuscar";
             this.cboxBuscar.Size = new System.Drawing.Size(121, 26);
             this.cboxBuscar.TabIndex = 8;
@@ -394,15 +409,16 @@
             this.dataListado.AllowUserToAddRows = false;
             this.dataListado.AllowUserToDeleteRows = false;
             this.dataListado.AllowUserToOrderColumns = true;
+            this.dataListado.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ELIMINAR});
-            this.dataListado.Location = new System.Drawing.Point(6, 135);
+            this.dataListado.Location = new System.Drawing.Point(6, 125);
             this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
             this.dataListado.ReadOnly = true;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(848, 325);
+            this.dataListado.Size = new System.Drawing.Size(888, 320);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -416,7 +432,7 @@
             // Listado
             // 
             this.Listado.AutoSize = true;
-            this.Listado.Location = new System.Drawing.Point(618, 106);
+            this.Listado.Location = new System.Drawing.Point(648, 91);
             this.Listado.Name = "Listado";
             this.Listado.Size = new System.Drawing.Size(50, 18);
             this.Listado.TabIndex = 6;
@@ -436,22 +452,28 @@
             // btnImprimir
             // 
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Location = new System.Drawing.Point(721, 31);
+            this.btnImprimir.Image = global::Capa_Presentacion.Properties.Resources.imprimir;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(785, 49);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(133, 29);
+            this.btnImprimir.Size = new System.Drawing.Size(103, 25);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
             this.btnEliminar.AutoSize = true;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(570, 31);
+            this.btnEliminar.Image = global::Capa_Presentacion.Properties.Resources.eliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(651, 49);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(133, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(103, 28);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -476,7 +498,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 550);
+            this.ClientSize = new System.Drawing.Size(938, 552);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label6);
             this.Name = "FrmProveedor";
